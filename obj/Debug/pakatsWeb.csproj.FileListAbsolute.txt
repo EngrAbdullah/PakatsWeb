@@ -1,0 +1,5 @@
+c:\users\pakats\documents\visual studio 2012\Projects\pakatsWeb\pakatsWeb\bin\pakatsWeb.dll
+c:\users\pakats\documents\visual studio 2012\Projects\pakatsWeb\pakatsWeb\bin\pakatsWeb.pdb
+c:\users\pakats\documents\visual studio 2012\Projects\pakatsWeb\pakatsWeb\obj\Debug\pakatsWeb.csprojResolveAssemblyReference.cache
+c:\users\pakats\documents\visual studio 2012\Projects\pakatsWeb\pakatsWeb\obj\Debug\pakatsWeb.dll
+c:\users\pakats\documents\visual studio 2012\Projects\pakatsWeb\pakatsWeb\obj\Debug\pakatsWeb.pdb
