@@ -38,7 +38,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -69,6 +75,24 @@
     <Compile Include="masterPage.Master.designer.cs">
       <DependentUpon>masterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="Models\login_tb.cs">
+      <DependentUpon>pakats_Ent.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pakats_Ent.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pakats_Ent.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pakats_Ent.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pakats_Ent.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pakats_Ent.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pakats_Ent.edmx</DependentUpon>
+    </Compile>
     <Compile Include="pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -87,6 +111,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="masterPage.Master" />
+    <EntityDeploy Include="Models\pakats_Ent.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>pakats_Ent.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\pakats_Ent.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>pakats_Ent.edmx</DependentUpon>
+      <LastGenOutput>pakats_Ent.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\pakats_Ent.edmx.diagram">
+      <DependentUpon>pakats_Ent.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\pakats_Ent.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>pakats_Ent.edmx</DependentUpon>
+      <LastGenOutput>pakats_Ent.cs</LastGenOutput>
+    </Content>
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -97,6 +139,9 @@
   <ItemGroup>
     <Folder Include="css\" />
     <Folder Include="images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

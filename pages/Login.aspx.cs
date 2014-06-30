@@ -6,15 +6,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using pakatsWeb.Models;
 namespace pakatsWeb.pages
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        string connetionString = null;
-        SqlCommand cmd;
-        SqlDataReader dataReader;
-        SqlConnection cnn;
-        string query = "";
+        pakats_dbEntities db = new pakats_dbEntities();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -22,24 +20,7 @@ namespace pakatsWeb.pages
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            string username = txtUserName.Text;
-            string password = txtPassword.Text;
-            connetionString = "Data Source=PAKATS-PC;Initial Catalog=pakats_db;User ID=sa;Password=pakats";
-            cnn = new SqlConnection(connetionString);
-            try
-            {
-                query = "Select * from login_tb where  ";
-                cmd = new SqlCommand(query, cnn);
-                if (cnn.State != ConnectionState.Open)
-                    cnn.Open();
-                dataReader = cmd.ExecuteReader();
-                dataReader.Close();
-                cnn.Close();
-            }
-            catch (Exception ex)
-            {
-                lblPassword.Text=ex.ToString();
-            }
+            
         }
 
 
