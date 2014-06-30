@@ -20,7 +20,7 @@
 
             </td>
             <td>
-                <input id="txtPassword" type="password" />
+                <asp:TextBox id="txtPassword" runat="server"></asp:TextBox>
 
             </td>
         </tr>

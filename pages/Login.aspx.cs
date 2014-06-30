@@ -22,12 +22,13 @@ namespace pakatsWeb.pages
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-           
+            string username = txtUserName.Text;
+            string password = txtPassword.Text;
             connetionString = "Data Source=PAKATS-PC;Initial Catalog=pakats_db;User ID=sa;Password=pakats";
             cnn = new SqlConnection(connetionString);
             try
             {
-                query = "";
+                query = "Select * from login_tb where  ";
                 cmd = new SqlCommand(query, cnn);
                 if (cnn.State != ConnectionState.Open)
                     cnn.Open();
